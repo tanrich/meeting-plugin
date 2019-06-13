@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>popup</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/milligram.min.css" rel="stylesheet">
+    <style>
+        .laydate-time-list li {list-style: none;}
+        .h3-header {text-align: center;}
+        form {margin-bottom: 0;}
+        button {outline: none;}
+        button:focus {background: #009688;border-color: #009688;}
+        button.btn-actived {background: #00786C;border: 1px solid #00786C;}
+    </style>
+</head>
+<body style="width:400px;min-height:100px;padding: 10px 20px">
+<div class="popup">
+    <h3 class="h3-header">会议室助手</h3>
+        <form action="">
+            <div class="form-group">
+                <label for="building-select">工作建筑选择：</label>
+                <select id="building-select" name="building-select"></select>
+            </div>
+            <div class="">
+                <label for="area-select">楼层选择：</label>
+                <select id="area-select" name="area-select"></select>
+            </div>
+            <div class="">
+                <label for="room-type">会议室类型：（暂不支持其他类型）</label>
+                <select disabled id="room-type" name="room-type">
+                    <option value="">全部</option>
+                    <option value="false">普通会议室</option>
+                    <option value="true">培训会议室</option>
+                </select>
+            </div>
+            <div class="">
+                <label for="room-size">会议室人数：</label>
+                <select id="room-size" name="room-size">
+                    <option value="">全部</option>
+                    <option value="0-9">微型（<=9人）</option>
+                    <option value="10-20">小型（10-20人）</option>
+                    <option value="21-30">中型（21-30人）</option>
+                    <option value="31-100">大型（>=30人）</option>
+                </select>
+            </div>
+            <div class="">
+                <label>开始时间：</label>
+                <input id="start-time" name="start-time" type="text" />
+            </div>
+            <div class="">
+                <label>结束时间：</label>
+                <input id="end-time" name="end-time" type="text" />
+            </div>
+            <button id="save-option" type="button">保存配置</button>
+            <button id="start-option" type="button">开始抢会议室</button>
+        </form>
+</div>
+<script src="js/laydate/laydate.js"></script>
+<script src="js/moment.js"></script>
+<script src="js/common.js"></script>
+<script src="js/popup.js"></script>
+</body>
+</html>
